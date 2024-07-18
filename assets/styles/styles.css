@@ -333,7 +333,136 @@ nav ul li:last-child{
 }
 /* end traning area */
 
+/* bmi calculator */
 
+.bmi-calc h2{
+  font-size: 48px;
+  text-align: center;
+}
+.bmi-calc p{
+  font-size: 14px;
+  line-height: 2rem;
+  opacity: 0.5;
+  text-align: center;
+}
+
+/* calculator table and input field */
+
+.calculator{
+  background-color: #222222;
+}
+.calculator-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0px;
+  gap: 20px;
+}
+.calculator-item-table{
+ width: 50%;
+ text-align: center;
+}
+.calculator-item-field{
+  width: 50%;
+}
+.calculator h2{
+  text-align: left;
+  font-size: 28px;
+  color: white;
+}
+table, td, th {  
+  border: 1px solid #4b4848;
+  text-align: left;
+}
+th, td {
+  padding: 10px;
+}
+th{
+  font-size: 16px;
+}
+td{
+  font-size: 14px;
+  opacity: 0.4;
+}
+table {
+  border-collapse: collapse;
+  width: 70%;
+  margin-top: 20px;
+}
+/* input area */
+
+.calculator-item-field p{
+  color: white;
+  font-size: 14px;
+  opacity: 0.5;
+  margin-top: 10px;
+}
+.user-input{
+  width: 100%;
+  margin-top: 20px;
+}
+.height-weight,.age-sex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#sex{
+  width: 100%;
+  padding: 16px 80px;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 16px 24px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  outline-color: #E6533C;
+  background-color: #383838;
+  color: white;
+}
+input::placeholder,select{
+  color: white;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+/* our team memeber */
+
+.team-trainer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 20px;
+  grid-gap: 20px;
+  background-color: #222222;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+.our-team h2{
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+}
+.our-team p{
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.5;
+  margin: 10px;
+}
+.team-member{
+  position: relative;
+}
+.trainer-detalis{
+  position: absolute;
+  top: 50%;
+  padding-left: 20px;
+}
+.team-member img{
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+}
 
 
 
@@ -431,7 +560,7 @@ nav ul li:last-child{
       column-width: 100%;
       padding: 50px 50px;
     }
-    .run-content h2,.traning h2{
+    .run-content h2,.traning h2,.bmi-calc h2{
       font-size: 32px;
     }
     .run-content .run-btn{
@@ -444,7 +573,7 @@ nav ul li:last-child{
       width: 100%;
       padding: 0px 0px;
     }
-    .run-image,.run-image, .run-img{
+    .run-image,.run-image, .run-img,.calculator-item-field,.calculator-item-table{
       width: 100%;
       height: 100%;
     }
@@ -456,7 +585,38 @@ nav ul li:last-child{
     font-size: 10px;
   }
 
+  /* calculator bmi */
+  .bmi-calc p{
+    line-height: normal;
+    margin-top: 5px;
+    text-align: left;
+  }
+  .bmi-calc h2{
+    text-align: left;
+  }
+.calculator-content{
+  flex-direction: column;
+}
 
+input[type=text], select {
+  width: 90%;
+}
+#sex{
+  width: 90%;
+  padding: 16px 80px;
+}
+
+/* our team */
+
+.team-trainer{
+  grid-template-columns: 1fr;
+}
+.our-team h2{
+  font-size: 36px;
+}
+.our-team p{
+  font-size: 14px;
+}
 }
 
 
@@ -532,6 +692,8 @@ nav ul li:last-child{
   }
   /* !end run area */
 
-
+  input[type=text], select {
+    width: 95%;
+  }
 
 }
