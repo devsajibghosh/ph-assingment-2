@@ -1,6 +1,7 @@
 /* import of fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playwrite+CU:wght@100..400&display=swap');
+/* lato is parent fonts of miami */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+CU:wght@100..400&display=swap');
 
 *{
   margin: 0;
@@ -23,12 +24,23 @@ body{
 section{
   margin: 40px 0px;
 }
-
+.btn{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  margin: 30px 0;
+  background-color: #E6533C;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
 
 /* navigation menu design */
 
 .header{
-  padding: 30px 0;
+  padding-top: 30px;
   background-color: rgb(27, 27, 27);
 }
 .header nav{
@@ -41,7 +53,7 @@ nav ul{
   gap: 45px;
   padding: 0 2px;
   border: 1px solid #292929;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 nav ul li{
   list-style: none;
@@ -49,7 +61,7 @@ nav ul li{
 }
 nav ul li:hover{
   background-color: #E6533C;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 nav .nav-title{
   font-family: "Inter", sans-serif;
@@ -64,11 +76,223 @@ nav ul li a{
 }
 nav ul li:first-child{
   background-color: #E6533C;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 nav ul li:last-child{
   display: none;
 }
 
 /* banner area */
+.banner-area{
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+.banner{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.banner-content{
+  width: 50%;
+}
+.banner-title{
+  font-size: 78px;
+  font-weight: 900;
+  line-height: normal;
+}
+.banner-description{
+  font-size: 14px;
+  margin-top: 20px;
+  opacity: 0.6;
+}
+.banner-content .shape{
+  font-family: "Playwrite CU", cursive;
+  font-weight: 600;
+  font-style: italic;
+}
+.banner-btn{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.banner-content .btn-2{
+  background: transparent;
+  border: 1px solid white;
+}
+.banner-main-img{
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
+.banner-tutorial .tutorial-content{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #2b2828;
+  backdrop-filter: blur(60px);
+  position: absolute;
+  top: 70%;
+  border-radius: 10px;
+}
+.fa-circle{
+  color: #E6533C; 
+  font-size: 30px;
+}
+.tutorial-content .title-tutorial{
+  font-size: 24px;
+  font-weight: 800;
+}
+.tutorial-content p{
+  font-size: 12px;
+  font-weight: normal;
+  opacity: 0.7;
+}
+.work-out{
+  padding: 10px 15px;
+  background-color: #2b2828;
+  backdrop-filter: blur(80px);
+  border-radius: 10px;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+}
+.title-workout{
+  font-size: 24px;
+  font-weight: 800;
+  text-align: start;
+}
+.work-out p{
+  font-size: 12px;
+  font-weight: normal;
+  opacity: 0.7;
+}
+/* end banner area */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! responsive area for sm, md,lg 600px to 1200px */
+
+@media screen and (max-width:600px) {
+    .container{
+      width: 90%;
+      margin: 0 auto;
+    }
+    nav ul{
+      border: none;
+    }
+    nav ul li{
+      display: none;
+      border: none;
+    }
+    nav ul li:last-child{
+      display: block;
+    }
+    .banner{
+      flex-direction: column;
+      column-width: 100%;
+    }
+    .banner-content,.banner-main-img{
+      width: 100%;
+    }
+    .banner-title{
+      font-size: 46px;
+    }
+    .banner-description{
+      width: 90%;
+      font-size: 16px;
+    }
+    /* banner part responsive end */
+
+}
+
+
+/*! another device ration 600px to 1200px */
+
+@media screen and (min-width: 600px) and (max-width: 1200px){
+  .container{
+    width: 90%;
+    margin: 0 auto;
+  }
+  nav ul{
+      gap: 20px;
+  }
+  nav ul li{
+  padding: 5px 10px;
+  
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+  .banner{
+    flex-direction: column;
+    column-width: 100%;
+  }
+  .banner-content,.banner-main-img{
+    width: 100%;
+  }
+  .banner-title{
+    font-size: 78px;
+    width: 70%;
+  }
+  .banner-description{
+    width: 70%;
+    font-size: 16px;
+  }
+  .banner-tutorial , .tutorial-content{
+    left: 16%;
+    padding: 20px;
+  }
+  .work-out{
+    top: 20%;
+    padding: 20px;
+  }
+  /* bannner part responsive end */
+
+}
