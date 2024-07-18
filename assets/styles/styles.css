@@ -169,11 +169,79 @@ nav ul li:last-child{
 }
 /* end banner area */
 
+/* ! habit area start */
 
+.habit-area .habit-title{
+  text-align: center;
+  font-size: 48px;
+}
+.habit-area .habit-description{
+  text-align: center;
+  font-size: 15px;
+  opacity: 0.5;
+  margin: 20px 0px;
+}
+.habit-content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+.habit-human{
+  text-align: center;
+}
+.habit-content .human-img{
+  border: 4px solid #292929;
+  border-radius: 50%;
+}
+.habit-human h3{
+  font-size: 18px;
+  font-weight: 500;
+}
+.habit-human p{
+  font-size: 14px;
+  padding: 5px 20px;
+  opacity: 0.5;
+}
+/* end of habit area */
 
+/*? run section design  */
 
-
-
+.run-area{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 50px;
+  background-color: #222222;
+  padding: 50px;
+  border-radius: 20px;
+}
+.run-content{
+  width: 50%;
+  padding: 0 50px;
+}
+.run-content h2{
+  font-size: 48px;
+  color: white;
+  margin: 10px 0px;
+  text-align: start;
+}
+.run-content p{
+  text-align: justify;
+  color: white;
+  opacity: 0.5;
+}
+.run-image{
+  width: 50%;
+  height: 50%;
+  text-align: end;
+}
+.run-image .run-img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+/* end run area */
 
 
 
@@ -234,9 +302,10 @@ nav ul li:last-child{
     nav ul li:last-child{
       display: block;
     }
-    .banner{
+    .banner,.habit-content{
       flex-direction: column;
       column-width: 100%;
+      row-gap: 30px;
     }
     .banner-content,.banner-main-img{
       width: 100%;
@@ -249,6 +318,47 @@ nav ul li:last-child{
       font-size: 16px;
     }
     /* banner part responsive end */
+
+    /* start responsive of habit part */
+
+    .habit-area .habit-title{
+      font-size: 32px;
+    }
+    .habit-area .habit-description{
+      font-size: 14px;
+    }
+    .habit-human h3{
+      margin: 8px;
+    }
+
+    /* end of habit part */
+
+    /*? start run part */
+    .run-area{
+      flex-direction: column;
+      column-width: 100%;
+      padding: 50px 50px;
+    }
+    .run-content h2{
+      font-size: 32px;
+    }
+    .run-content .run-btn{
+      text-align: center;
+    }
+    .run-btn .btn{
+      padding: 10px 50px;
+    }
+    .run-content{
+      width: 100%;
+      padding: 0px 0px;
+    }
+    .run-image,.run-image, .run-img{
+      width: 100%;
+      height: 100%;
+    }
+  /*! end run area */
+
+
 
 }
 
@@ -294,5 +404,36 @@ nav ul li:last-child{
     padding: 20px;
   }
   /* bannner part responsive end */
+
+  /*? habit is responsive  */
+  .habit-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+  }
+  /* end of habit part */
+
+  /* ? start run area */
+
+  .run-area{
+    padding: 30px 30px;
+  }
+  .run-content{
+    padding: 0px 0px;
+  }
+  .run-content h2{
+    font-size: 36px;
+  }
+  .run-image{
+    width: 50%;
+    height: 100%;
+    padding: 0px 0px;
+  }
+  .run-img{
+    width: 100%;
+    height: 100%;
+  }
+  /* !end run area */
+
 
 }
